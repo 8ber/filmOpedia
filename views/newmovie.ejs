@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FilmOpedia</title>
+<link rel="stylesheet" href='http://localhost:3000/stylesheets/style.css'>
+</head>
+<body>
+    <div class="header">
+        <img src='http://localhost:3000/images/filmOpediafinal.svg' id="logo">
+    </div>
+        <div class="mainBox" id="contentBox">
+                Hello <%= data.username %>,  <%= data.actionsLeft %> actions left today.<br><br>
+                Search Results<br><br>
+                <form action="/addmovie" method="POST" id="form">
+                    <label for="name">Name:</label> 
+                    <input type="text" name="name" required>
+            
+                    <label for="language">Language:</label> 
+                    <select name="language" required>
+                        <option value="English">English</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Hebrew">Hebrew</option>
+                    </select>
+              
+                    <label>Genres:</label>
+                    <Br>
+            
+                    <input type="checkbox" name="genres" value="Comedy">
+                    <label for="Comedy">Comedy</label>
+            
+                    <input type="checkbox" name="genres" value="Anime">
+                    <label for="Anime">Anime</label>
+            
+                    <input type="checkbox" name="genres" value="Fantasy">
+                    <label for="Fantasy">Fantasy</label>
+            
+                    <input type="checkbox" name="genres" value="Mystery">
+                    <label for="Mystery">Mystery</label>
+            
+                    <input type="checkbox" name="genres" value="Horror">
+                    <label for="Horror">Horror</label>
+            
+                    <input type="checkbox" name="genres" value="Drama">
+                    <label for="Drama">Drama</label> 
+            
+                    <input type="checkbox" name="genres" value="Action">
+                    <label for="Action">Action</label>
+            
+                    <input type="checkbox" name="genres" value="Science-Fiction">
+                    <label for="Science-Fiction">Science-Fiction</label>
+            
+                    <input type="checkbox" name="genres" value="Crime">
+                    <label for="Crime">Crime</label>
+            
+                    <input type="checkbox" name="genres" value="Thriller">
+                    <label for="Thriller">Thriller</label>
+                    
+                <input type="reset" value="Clear" />
+                <input type="submit" value="Add title" />
+                </form>
+
+            
+    </div>
+    <div class="footer">
+        <span class="menu"> <a href="menu" class="menu">→Back to menu</a></span>
+    </div>    
+</body>
+</html>
+    

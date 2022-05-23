@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FilmOpedia</title>
+<link rel="stylesheet" href='http://localhost:3000/stylesheets/style.css'>
+</head>
+<body>
+    <div class="header">
+        <img src='http://localhost:3000/images/filmOpediafinal.svg' id="logo">
+    </div>
+    <div class="mainBox" id="contentBox">
+        <% if (!user) { %>
+            <form action="/admin/add" method="POST" id="form">
+            username: <input type="text" name="username">
+            password: <input type="password" name="password">
+            Allowed actions per 24h: <input type="number" name="numOfActions">
+            Admin? <input type="checkbox" value="true" name="isAdmin">
+            <input type="submit" value="Add user" />
+            </form>
+        <% } else { %>
+            <form action="/admin/update" method="POST" id="form">
+            username: <input type="text" name="username" value="<%= user.username %>">
+            password: <input type="password" name="password" value="<%= user.password %>">
+            Allowed actions per 24h: <input type="number"name="numOfActions" value="<%= user.numOfActions %>">
+            <% if (user.isAdmin) { %>
+            Admin? <input type="checkbox" value="true" name="isAdmin" checked>
+            <% } else { %>
+                Admin? <input type="checkbox" value="true" name="isAdmin">
+            <% } %>
+            <input type="submit" value="Update user" />
+            </form>
+        <% } %>
+    </div> 
+    <div class="footer">
+        <span class="menu"> <a href="../menu" class="menu">→Back to menu</a></span>
+    </div>    
+</body>
+</html>

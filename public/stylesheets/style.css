@@ -1,0 +1,207 @@
+body { 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 5px;
+  justify-items: center;
+  font-family: Tahoma, Verdana, sans-serif; 
+  background-color: black;
+  color: rgba(238, 238, 238, 0.849);
+  font-size: 1.2em;
+  text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+}
+
+.header { grid-row: 1 / span 1; }
+ #logo { 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 40%;
+  height: auto;
+}
+ 
+.mainBox { grid-row: 2 / span 1; }
+#contentBox {
+  text-align: center;
+  width: 45%;
+  border: 1.5px solid rgb(255, 255, 255);
+  background: rgba(41, 42, 41, 0.7);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto; 
+  padding: 5px;
+ }
+#loginBox { 
+  padding: 5px;
+  text-align: center;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1.5px solid rgb(255, 255, 255);
+  background: rgba(41, 42, 41, 0.7);
+  border-radius: 10px;
+}
+.menu {
+  text-align: justify;
+  width: 80%;
+  display: inline-block;
+}
+#menuDiv { 
+  display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 5px;
+   text-align: center;
+   width: 45%;
+   margin-left: auto;
+   margin-right: auto;
+   border: 1.5px solid rgb(255, 255, 255);
+   background: rgba(41, 42, 41, 0.7);
+   border-radius: 10px;
+  }
+#loginForm {
+  display:flex;
+   justify-content:space-between;
+   flex-wrap:wrap;
+}
+#form {
+  text-align:start;
+  display:grid;
+  grid-template-columns: max-content max-content;
+  justify-content:center;
+  column-gap:35px;
+  row-gap: 15px;
+}
+#searchResults {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+
+.footer {
+  grid-row: 3 / span 1;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+  width: 45%;
+  border: 1.5px solid rgb(255, 255, 255);
+  background: rgba(41, 42, 41, 0.7);
+  border-radius: 10px;
+}
+
+
+
+
+
+/* #form label, #form input[type='checkbox']       { text-align:start; grid-gap:0px; } */
+
+/* label {
+  text-align: start;
+  width: 5em;
+  display: inline-block;
+} */
+
+select { 
+  border-radius: var(--main-radius);
+  background: rgb(202, 202, 202);
+  color: black;
+  padding: 5px 10px;
+  appearance: none;
+  /* width: 10em; */
+  display: inline-block;
+}
+input[type=text], input[type=password] { 
+  border-radius: var(--main-radius);
+  background: rgb(202, 202, 202);
+  color: black;
+  display: inline-block;
+  /* width: 10em; */
+  padding: 5px 10px;
+}
+input[type=button], input[type=submit], input[type=reset] { 
+  border-radius: var(--main-radius);
+  background: rgb(202, 202, 202);
+  color: black;
+}
+
+
+
+#status { color: red }
+
+
+
+  
+
+  
+  
+  #EditContentBox {
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    width: 90%;
+    border: 1.5px solid black;
+    background: rgba(238, 238, 238, 0.7);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 5px;
+  }
+  
+  .menu:any-link { 
+    -webkit-transition: font-size 1.5s;
+    transition: font-size 1.5s;
+    text-decoration: none;
+    color: rgba(238, 238, 238, 0.7);
+  }
+  a:visited, a:active, a:link {
+    text-decoration: underline dashed rgba(8, 8, 8, 0.3) 0.5px;
+    color: rgba(238, 238, 238, 0.7);
+  }
+  .menu:hover {
+    font-size: 110%;
+  }
+  
+  /* #mainTable {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 10px;
+  }
+  
+  #mainTable td { border: 1px dashed rgba(8, 8, 8, 0.3);
+    border-radius: 5px;
+  }
+  */
+  /* #vl {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-left: 5px dotted rgba(39, 27, 27, 0.7);
+    height: 100%;
+  } */
+  
+  /* #editContent {
+    text-align: center;
+    text-justify: inter-word;
+  } */
+  
+  /* p {   text-align: justify;
+    text-justify: inter-word; 
+  } */
+  /* #gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr ;
+    grid-gap: 0.1rem;
+  } */
+  /* input[type=date] { 
+    border-radius: var(--main-radius); 
+   background: rgb(202, 202, 202);
+   color: black;
+   width: 150px;
+  } */
+

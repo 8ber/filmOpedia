@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmOpedia</title>
+    <link rel="stylesheet" href='http://localhost:3000/stylesheets/style.css'>
+</head>
+
+<body>
+    <div class="header">
+        <img src='http://localhost:3000/images/filmOpediafinal.svg' id="logo">
+    </div>
+    <div class="mainBox" id="contentBox">
+
+        <% if(searchData.allRes.length> 0) { %>
+            <strong>Search Results</strong> <br><br>
+            <table id="searchResults">
+                <tr>
+                    <td><u>Titles</u></td>
+                    <% if(typeof searchData.sameGenre !="undefined" && searchData.sameGenre.length> 0){ %>
+                        <td><u>Maybe you'd like...</u></td>
+                        <% } %>
+
+                </tr>
+                <tr>
+                    <td>
+                        <% searchData.allRes.forEach(mov=> {%>
+                            <a href="/search/<%= mov.id %>">
+                                <%= mov.name %>
+                            </a><br>
+                            <% }) %>
+                    </td>
+                    <td>
+                        <% if(typeof searchData.sameGenre !="undefined" && searchData.sameGenre.length> 0){ %>
+                            <% searchData.sameGenre.forEach(mov=> {%>
+                                <a href="/search/<%= mov.id %>">
+                                    <%= mov.name %>
+                                </a><br>
+                                <% }) } } %>
+                    </td>
+                </tr>
+            </table>
+            <% if(searchData.allRes.length==0){ %>
+                <strong>Oops. No results</strong>
+                <% } %>
+
+
+    </div>
+    <div class="footer">
+        <span class="menu"> <a href="menu" class="menu">→Back to menu</a></span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FilmOpedia</title>
+<link rel="stylesheet" href='http://localhost:3000/stylesheets/style.css'>
+</head>
+<body>
+    <div class="header">
+        <img src='http://localhost:3000/images/filmOpediafinal.svg' id="logo">
+    </div>
+        <div class="mainBox" id="contentBox">
+                Hello <%= data.username %>,  <%= data.actionsLeft %> actions left today.<br><br>
+                Browse the goods:<br><br>
+            
+                <form action="/search" method="POST" id="form">
+                    <label for="name">Name:</label> 
+                    <input type="text" name="name">
+    
+                    <label for="language">Language:</label> 
+                    <select name="language">
+                        <option ></option>
+                        <option value="English">English</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Hebrew">Hebrew</option>
+                    </select>
+              
+                    <label for="genres">Genres:</label> 
+                    <select name="genres">
+                        <option></option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Action">Action</option>
+                        <option value="Science-Fiction">Science-Fiction</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Anime">Anime</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Thriller">Thriller</option>
+                    </select>
+                <input type="submit" value="Search" />
+                <input type="reset" value="Clear" />
+                </form>
+            
+    </div>
+    <div class="footer">
+        <span class="menu"> <a href="menu" class="menu">→Back to menu</a></span>
+    </div>    
+</body>
+</html>
